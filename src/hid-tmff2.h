@@ -103,6 +103,7 @@ int t300rs_populate_api(struct tmff2_device_entry *tmff2);
 int t248_populate_api(struct tmff2_device_entry *tmff2);
 int tx_populate_api(struct tmff2_device_entry *tmff2);
 int tsxw_populate_api(struct tmff2_device_entry *tmff2);
+int tspc_populate_api(struct tmff2_device_entry *tmff2);
 
 #define TMT300RS_PS3_NORM_ID	0xb66e
 #define TMT300RS_PS3_ADV_ID	0xb66f

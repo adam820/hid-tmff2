@@ -658,7 +658,6 @@ static int tmff2_probe(struct hid_device *hdev, const struct hid_device_id *id)
 	hid_set_drvdata(tmff2->hdev, tmff2);
 
 	switch (tmff2->hdev->product) {
-        case TMTS_PC_RACER_ID:
 		case TMT300RS_PS3_NORM_ID:
 		case TMT300RS_PS3_ADV_ID:
 		case TMT300RS_PS4_NORM_ID:
@@ -677,6 +676,10 @@ static int tmff2_probe(struct hid_device *hdev, const struct hid_device_id *id)
 			break;
 		case TSXW_ACTIVE:
 			if ((ret = tsxw_populate_api(tmff2)))
+				goto wheel_err;
+			break;
+		case TMTS_PC_RACER_ID:
+			if ((ret = tspc_populate_api(tmff2)))
 				goto wheel_err;
 			break;
 		default:
