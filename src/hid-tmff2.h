@@ -114,6 +114,8 @@ int tsxw_populate_api(struct tmff2_device_entry *tmff2);
 
 #define TSXW_ACTIVE		0xb692
 
+#define TMTS_PC_RACER_ID 0xb689
+
 /* APIs to different wheel families */
 /* T248 and TX at least uses the T300RS api, not sure if there are other wheels
  * but that's why these functions are given global linkage */
